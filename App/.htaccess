@@ -1,0 +1,5 @@
+# Deny access to all users
+<Files "*">
+    Order Allow,Deny
+    Deny from all
+</Files>

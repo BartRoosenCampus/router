@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/projects/Repositories/05_Andere/router/index\.php$
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js|ico)$ [NC]
+RewriteRule ^.*$ /projects/Repositories/05_Andere/router/index.php [L]
