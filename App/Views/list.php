@@ -3,15 +3,33 @@
 <?php require_once "head.php"; ?>
 <body>
 <?php require_once "nav.php"; ?>
-<h1>List</h1>
-<?php if ($params->names === null): ?>
-<p>
-    Geen namen gevonden...
-</p>
-<?php else: ?>
-<?php foreach ($params->names as $name): ?>
-    <p><?= $name; ?></p>
-<?php endforeach; ?>
-<?php endif; ?>
+<div class="container">
+    <h1><?= $params->title; ?></h1>
+    <?php if ($params->modules === null): ?>
+        <p>
+            Geen modules gevonden...
+        </p>
+    <?php else: ?>
+        <table>
+            <thead>
+            <tr>
+                <th class="small">Module id</th>
+                <th>Module name</th>
+                <th class="small">Duration</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($params->modules as $module): ?>
+                <tr>
+                    <td><?= $module->getId() ?></td>
+                    <td><?= $module->getName() ?></td>
+                    <td><?= $module->getDuration() ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+
+    <?php endif; ?>
+</div>
 </body>
 </html>

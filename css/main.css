@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: monospace, sans-serif;
+}
+
+nav {
+    background-color: lightseagreen;
+    color: whitesmoke;
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right: 2em;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(135, 176, 174, 0.31);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(211, 245, 243, 0.31);
+}
+
+tr:hover {
+    background-color: rgba(67, 79, 78, 0.8);
+    color: whitesmoke;
+}
+
+th, td {
+    padding: .5em;
+}
+
+th {
+    text-align: left;
+    background-color: lightseagreen;
+    color: whitesmoke;
+}
+
+.small {
+    width: 100px;
+}

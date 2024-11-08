@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Services\ModulesService;
 use App\Services\NamesService;
 
 class ListController extends AbstractController
@@ -10,9 +11,10 @@ class ListController extends AbstractController
     {
         parent::__construct();
 
-        $namesService = new NamesService();
+        $modulesService = new ModulesService();
 
-        $this->params->names = $namesService->getNames();
+        $this->params->modules = $modulesService->getAllModules();
+        $this->params->title = "Module list";
 
         $this->renderPage("App/Views/list.php");
     }
