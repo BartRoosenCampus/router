@@ -24,7 +24,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-img {
+.container > img {
     width: 50%;
     margin: 0 auto;
 }
@@ -59,4 +59,38 @@ th {
 
 .small {
     width: 100px;
+}
+
+.app-title {
+    background-color: #0b6460;
+    color: whitesmoke;
+    font-size: 2em;
+    font-weight: bold;
+    padding: .5em;
+}
+
+.footer {
+    background-color: #0b6460;
+    color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.2em 0;
+    text-align: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.height-64 {
+    height: 64px;
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+.user {
+    float: right;
 }
