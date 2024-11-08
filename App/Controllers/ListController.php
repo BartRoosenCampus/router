@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Services\ModulesService;
-use App\Services\NamesService;
 
 class ListController extends AbstractController
 {
