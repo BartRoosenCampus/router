@@ -14,6 +14,12 @@ class LoginService
         return ($post['user'] === "Bart" && $post['pass'] === "w8w00rd");
     }
 
+    public function setUser(string $user)
+    {
+        $this->startSession();
+        $_SESSION['user'] = $user;
+    }
+
     public function getUser(): ?string
     {
         $this->startSession();
@@ -25,6 +31,7 @@ class LoginService
     public function authenticateUser()
     {
         if (null === $this->getUser()) {
+            // hier eventueel naar een access denied pagina navigeren
             header('location: ./home');
             die;
         }

@@ -8,14 +8,14 @@ class LoginController extends AbstractController
 {
     public function __construct()
     {
+        parent::__construct();
         if ($_SERVER['REQUEST_METHOD'] === "POST" && $this->verifyUser()) {
-            session_start();
-            $_SESSION['user'] = $_POST['user'];
 
-            header('location: ./home');
+            $this->loginService->setUser($_POST['user']);
+            header('location: ./secret');
             die;
         }
-        parent::__construct();
+
         $this->params->title = "Login";
 
         $this->renderPage("App/Views/form.php");
@@ -23,8 +23,6 @@ class LoginController extends AbstractController
 
     private function verifyUser(): bool
     {
-        $loginService = new LoginService();
-
-        return $loginService->verifyUser($_POST);
+        return $this->loginService->verifyUser($_POST);
     }
 }
